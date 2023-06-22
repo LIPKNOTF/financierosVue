@@ -1,8 +1,18 @@
 <?php
 
-
+// rutas apis(controladores) PINCHE DAVID
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlumnosController;
+
+
+
+// rutas apis(controladores) HECTOR
+
+
+
+
+// rutas apis(controladores) PANCHO
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,6 +36,14 @@ Route::get('index', function () {
 //rutas vistas
 Route::view('alumno','alumnos/alumnos');
 
-// rutas apis(controladores)
+// rutas apis(controladores) PINCHE DAVID
 Route::apiResource('apiAlumno',AlumnosController::class);
 Route::apiResource('apiCapitulo', CapituloController::class);
+
+
+
+// rutas apis(controladores) HECTOR
+
+
+
+// rutas apis(controladores) PANCHO

@@ -137,7 +137,7 @@ function init(){
                   title: "OCURRIO UN PROBLEMA",
                   text: "Existen campos vacios!",
                   showConfirmButton: false,
-                  timer: 600,
+                  timer: 1000,
               });
           } else {
             this.$http.post(apiAlum, alumno).then(function(json){
@@ -157,7 +157,7 @@ function init(){
               title: "GENIAL",
               text: "Se agrego el alumno con exito!",
               showConfirmButton: false,
-              timer: 600,
+              timer: 1000,
           });
             
 
@@ -206,7 +206,7 @@ function init(){
                   title: "OCURRIO UN PROBLEMA",
                   text: "Existen campos vacios!",
                   showConfirmButton: false,
-                  timer: 600,
+                  timer: 1000,
               });
           } else {
               this.$http
@@ -218,7 +218,7 @@ function init(){
                           title: "GENIAL",
                           text: "El sistema educativo se actualizo con éxito!",
                           showConfirmButton: false,
-                          timer: 600,
+                          timer: 1000,
                       });
                       $("#modalAlumno").modal("hide");
                   });
@@ -242,7 +242,7 @@ function init(){
                 title: "Eliminado!",
                 text: "El alumno ha sido eliminado con éxito.",
                 icon: "success",
-                timer: 600,
+                timer: 1000,
                 showConfirmButton: false,
               });
             this.$http.delete(apiAlum + "/" + id).then(function(json){
