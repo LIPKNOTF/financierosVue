@@ -56,7 +56,7 @@
     </div>
   </div>
 </div>
-<table class="table">
+<table class="table" id="dataPlanes">
   <thead>
     <tr>
       <th scope="col">NOMBRES</th>
@@ -96,9 +96,9 @@
 
 
 @push('scripts')
-{{-- <script src="js/bootstrap.bundle.min.js"></script> --}}
+ <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/vue-resource.js"></script>
-        <script src="js/apis/apiAlumno.js"></script>
+<script src="js/apis/apiAlumno.js"></script>
 
 @endpush
 <input type="hidden" name="route" value="{{ url('/') }}">
