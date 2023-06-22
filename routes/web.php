@@ -18,8 +18,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// ruta plantilla master
 Route::get('index', function () {
     return view('index');
 });
+
+//rutas vistas
 Route::view('alumno','alumnos/alumnos');
+
+// rutas apis(controladores)
 Route::apiResource('apiAlumno',AlumnosController::class);
+Route::apiResource('apiCapitulo', CapituloController::class);
