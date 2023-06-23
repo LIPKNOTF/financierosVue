@@ -11,5 +11,7 @@ class Capitulo extends Model
 
     protected $table = 'capitulo';
     protected $primaryKey = 'id';
+    public $incrementing=false;
+    public $timestamps=false;
     protected $fillable = ['id','codigo','titulo'];
 }
