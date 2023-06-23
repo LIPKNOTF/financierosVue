@@ -86,6 +86,7 @@
 
 
 @push('scripts')
+<script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/vue-resource.js"></script>
 <script src="js/apis/apiAlumno.js"></script>
 @endpush
