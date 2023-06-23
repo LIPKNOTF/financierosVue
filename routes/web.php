@@ -1,9 +1,10 @@
 <?php
 
-// rutas apis(controladores) PINCHE DAVID
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlumnosController;
 
+<<<<<<< HEAD
 
 // rutas apis(controladores) HECTOR
 use App\Http\Controllers\ConsulasControlador;
@@ -11,6 +12,8 @@ use App\Http\Controllers\ConsulasControlador;
 
 // rutas apis(controladores) PANCHO
 
+=======
+>>>>>>> 52ea15595ff8dd5cd9bdc53ad73ee9d82b9e37aa
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,7 +24,6 @@ use App\Http\Controllers\ConsulasControlador;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -33,9 +35,11 @@ Route::get('index', function () {
 
 //rutas vistas
 Route::view('alumno','alumnos/alumnos');
+Route::view('capitulo','capitulo/capitulo');
 
-// rutas apis(controladores) PINCHE DAVID
+// rutas apis(controladores)
 Route::apiResource('apiAlumno',AlumnosController::class);
+<<<<<<< HEAD
 Route::apiResource('apiCapitulo', CapituloController::class);
 
 
@@ -44,3 +48,6 @@ Route::apiResource('apiCapitulo', CapituloController::class);
 Route::apiResource('apiConsulta', ConsulasControlador::class);
 Route::view('consulta', 'consultas/Consultas');
 // rutas apis(controladores) PANCHO
+=======
+Route::apiResource('apiCapitulo',CapituloController::class);
+>>>>>>> 52ea15595ff8dd5cd9bdc53ad73ee9d82b9e37aa

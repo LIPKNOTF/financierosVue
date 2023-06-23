@@ -36,63 +36,7 @@ function init(){
         },
 
       methods: {
-        // funcion para el complemento de dataTables
-        dataPlanes() {
-          $("#dataPlanes").DataTable().destroy();
-          this.$nextTick(() => {
-              $("#dataPlanes").DataTable({
-                  language: {
-                      sProcessing: "Procesando...",
-                      sLengthMenu: "Mostrar MENU registros",
-                      sZeroRecords: "No se encontraron resultados",
-                      sEmptyTable: "Ningún dato disponible en esta tabla",
-                      sInfo: "Mostrando registros del START al END de un total de TOTAL registros",
-                      sInfoEmpty:
-                          "Mostrando registros del 0 al 0 de un total de 0 registros",
-                      sInfoFiltered:
-                          "(filtrado de un total de MAX registros)",
-                      sInfoPostFix: "",
-                      sSearch: "Buscar:",
-                      sUrl: "",
-                      sInfoThousands: ",",
-                      sLoadingRecords: "Cargando...",
-                      oPaginate: {
-                          sFirst: "Primero",
-                          sLast: "Último",
-                          sNext: "Siguiente",
-                          sPrevious: "Anterior",
-                      },
-                  },
-                  // centrar encabezados de la tabla
-                  // columnDefs: [
-                  //     { className: "dt-center", targets: "_all" },
-                  // ],
-                  // fin de centrar
-                  pagingType: "full_numbers",
-                  // pageLength: 5,
-                  processing: true,
-                  dom: "Bfrtip",
-                  buttons: [
-                      {
-                          extend: "excelHtml5",
-                          text: '<i class="fa-regular fa-file-excel"></i>',
-                          titleAttr: "Exportar a Excel",
-                          className: "btn btn-outline-info",
-                          exportOptions: {
-                              modifier: {
-                                  page: "current",
-                              },
-                          },
-                      },
-                  ],
-                  dom:
-                      "<'row'<'col-sm-6'B><'col-sm-6'f>>" +
-                      "<'row'<'col-sm-12'tr>>" +
-                      "<'row'<'col-sm-4'i><'col-sm-4 text-center'l><'col-sm-4'p>>",
-              });
-          });
-      },
-      // fin de la funcion para el complemento de dataTables
+      
 //OBTIENER TODOS LOS ALUMNOS
           obtenerAlumno: function(){
             this.$http.get(apiAlum).then(function(json){

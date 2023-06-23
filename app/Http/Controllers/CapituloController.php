@@ -25,7 +25,13 @@ class CapituloController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $capitulo = new Capitulo();
+
+        $capitulo->id = $request->get('id');
+        $capitulo->codigo = $request->get('codigo');
+        $capitulo->titulo = $request->get('titulo');
+
+        $capitulo->save();
     }
 
     /**
