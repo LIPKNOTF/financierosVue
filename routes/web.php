@@ -5,10 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlumnosController;
 
 
-
 // rutas apis(controladores) HECTOR
-
-
+use App\Http\Controllers\ConsulasControlador;
 
 
 // rutas apis(controladores) PANCHO
@@ -43,7 +41,6 @@ Route::apiResource('apiCapitulo', CapituloController::class);
 
 
 // rutas apis(controladores) HECTOR
-
-
-
+Route::apiResource('apiConsulta', ConsulasControlador::class);
+Route::view('consulta', 'consultas/Consultas');
 // rutas apis(controladores) PANCHO

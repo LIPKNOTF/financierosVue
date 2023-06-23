@@ -209,9 +209,7 @@ function init(){
                   timer: 1000,
               });
           } else {
-              this.$http
-                  .patch(apiAlum + "/" + this.id, alumno)
-                  .then(function (json) {
+              this.$http.patch(apiAlum + "/" + this.id, alumno).then(function (json) {
                       this.obtenerAlumno();
                       Swal.fire({
                           icon: "success",

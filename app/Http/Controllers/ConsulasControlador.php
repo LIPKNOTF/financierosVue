@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Consultas;
 use Illuminate\Http\Request;
 
 class ConsulasControlador extends Controller
@@ -14,6 +15,9 @@ class ConsulasControlador extends Controller
     public function index()
     {
         //
+        $consulta = Consultas::all();
+        return $consulta;
+
     }
 
     /**
@@ -35,6 +39,17 @@ class ConsulasControlador extends Controller
     public function store(Request $request)
     {
         //
+        $consulta = new Consultas();
+        $consulta->id = $request->get('id');
+        $consulta->id_alumno = $request->get('id_alumno');
+        $consulta->importe = $request->get('importe');
+        $consulta->clave = $request->get('clave');
+        $consulta->cantidad = $request->get('cantidad');
+        $consulta->cuota = $request->get('cuota');
+        $consulta->fecha = $request->get('fecha');
+        $consulta->folio = $request->get('folio');
+        $consulta->concepto = $request->get('concepto');
+        $consulta->save();
     }
 
     /**
@@ -46,6 +61,7 @@ class ConsulasControlador extends Controller
     public function show($id)
     {
         //
+        return Consultas::find($id);
     }
 
     /**
@@ -69,6 +85,17 @@ class ConsulasControlador extends Controller
     public function update(Request $request, $id)
     {
         //
+        $consulta = Consultas::find($id);
+        $consulta->id = $request->get('id');
+        $consulta->id_alumno = $request->get('id_alumno');
+        $consulta->importe = $request->get('importe');
+        $consulta->clave = $request->get('clave');
+        $consulta->cantidad = $request->get('cantidad');
+        $consulta->cuota = $request->get('cuota');
+        $consulta->fecha = $request->get('fecha');
+        $consulta->folio = $request->get('folio');
+        $consulta->concepto = $request->get('concepto');
+        $consulta->update();
     }
 
     /**
@@ -80,5 +107,7 @@ class ConsulasControlador extends Controller
     public function destroy($id)
     {
         //
+        $consulta = Consultas::find($id);
+        $consulta->delete();
     }
 }
